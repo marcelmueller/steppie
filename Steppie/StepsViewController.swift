@@ -103,7 +103,7 @@ private extension StepsViewController {
     func querySteps() {
         let sampleQuery = HKSampleQuery(sampleType: healthKitManager.stepsCount!,
                                         predicate: nil,
-                                        limit: 100,
+                                        limit: 10,
                                         sortDescriptors: nil)
         { [unowned self] (query, results, error) in
             
