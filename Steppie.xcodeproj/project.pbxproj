@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F4FAEAD1E160F2400A6143A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4FAEAC1E160F2400A6143A /* AppDelegate.swift */; };
+		1F4FAEB21E160F2400A6143A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4FAEB01E160F2400A6143A /* Main.storyboard */; };
+		1F4FAEB41E160F2400A6143A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4FAEB31E160F2400A6143A /* Assets.xcassets */; };
+		1F4FAEB71E160F2400A6143A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4FAEB51E160F2400A6143A /* LaunchScreen.storyboard */; };
+		1F4FAEC11E16100400A6143A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4FAEC01E16100400A6143A /* HealthKit.framework */; };
+		1F935C0C1E1A336E0054C0C2 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F935C0B1E1A336E0054C0C2 /* HealthKitManager.swift */; };
+		1FA1B4061E18912600BBE33F /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1B4051E18912600BBE33F /* StepsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F4FAEA91E160F2400A6143A /* Steppie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Steppie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F4FAEAC1E160F2400A6143A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F4FAEB11E160F2400A6143A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F4FAEB31E160F2400A6143A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F4FAEB61E160F2400A6143A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F4FAEB81E160F2400A6143A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F4FAEBE1E16100400A6143A /* Steppie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Steppie.entitlements; sourceTree = "<group>"; };
+		1F4FAEC01E16100400A6143A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		1F935C0B1E1A336E0054C0C2 /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		1FA1B4051E18912600BBE33F /* StepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F4FAEA61E160F2400A6143A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4FAEC11E16100400A6143A /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F4FAEA01E160F2400A6143A = {
+			isa = PBXGroup;
+			children = (
+				1F4FAEAB1E160F2400A6143A /* Steppie */,
+				1F4FAEAA1E160F2400A6143A /* Products */,
+				1F4FAEBF1E16100400A6143A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F4FAEAA1E160F2400A6143A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F4FAEA91E160F2400A6143A /* Steppie.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F4FAEAB1E160F2400A6143A /* Steppie */ = {
+			isa = PBXGroup;
+			children = (
+				1F935C0B1E1A336E0054C0C2 /* HealthKitManager.swift */,
+				1F4FAEBE1E16100400A6143A /* Steppie.entitlements */,
+				1F4FAEAC1E160F2400A6143A /* AppDelegate.swift */,
+				1F4FAEB01E160F2400A6143A /* Main.storyboard */,
+				1FA1B4051E18912600BBE33F /* StepsViewController.swift */,
+				1F4FAEB31E160F2400A6143A /* Assets.xcassets */,
+				1F4FAEB51E160F2400A6143A /* LaunchScreen.storyboard */,
+				1F4FAEB81E160F2400A6143A /* Info.plist */,
+			);
+			path = Steppie;
+			sourceTree = "<group>";
+		};
+		1F4FAEBF1E16100400A6143A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F4FAEC01E16100400A6143A /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F4FAEA81E160F2400A6143A /* Steppie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F4FAEBB1E160F2400A6143A /* Build configuration list for PBXNativeTarget "Steppie" */;
+			buildPhases = (
+				1F4FAEA51E160F2400A6143A /* Sources */,
+				1F4FAEA61E160F2400A6143A /* Frameworks */,
+				1F4FAEA71E160F2400A6143A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Steppie;
+			productName = Steppie;
+			productReference = 1F4FAEA91E160F2400A6143A /* Steppie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F4FAEA11E160F2400A6143A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Marcel Muller";
+				TargetAttributes = {
+					1F4FAEA81E160F2400A6143A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = YNWY58266D;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 1F4FAEA41E160F2400A6143A /* Build configuration list for PBXProject "Steppie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F4FAEA01E160F2400A6143A;
+			productRefGroup = 1F4FAEAA1E160F2400A6143A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F4FAEA81E160F2400A6143A /* Steppie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F4FAEA71E160F2400A6143A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4FAEB71E160F2400A6143A /* LaunchScreen.storyboard in Resources */,
+				1F4FAEB41E160F2400A6143A /* Assets.xcassets in Resources */,
+				1F4FAEB21E160F2400A6143A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F4FAEA51E160F2400A6143A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FA1B4061E18912600BBE33F /* StepsViewController.swift in Sources */,
+				1F4FAEAD1E160F2400A6143A /* AppDelegate.swift in Sources */,
+				1F935C0C1E1A336E0054C0C2 /* HealthKitManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F4FAEB01E160F2400A6143A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F4FAEB11E160F2400A6143A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F4FAEB51E160F2400A6143A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F4FAEB61E160F2400A6143A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F4FAEB91E160F2400A6143A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F4FAEBA1E160F2400A6143A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F4FAEBC1E160F2400A6143A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Steppie/Steppie.entitlements;
+				DEVELOPMENT_TEAM = YNWY58266D;
+				INFOPLIST_FILE = Steppie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmuller.Steppie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1F4FAEBD1E160F2400A6143A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Steppie/Steppie.entitlements;
+				DEVELOPMENT_TEAM = YNWY58266D;
+				INFOPLIST_FILE = Steppie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmuller.Steppie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F4FAEA41E160F2400A6143A /* Build configuration list for PBXProject "Steppie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F4FAEB91E160F2400A6143A /* Debug */,
+				1F4FAEBA1E160F2400A6143A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F4FAEBB1E160F2400A6143A /* Build configuration list for PBXNativeTarget "Steppie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F4FAEBC1E160F2400A6143A /* Debug */,
+				1F4FAEBD1E160F2400A6143A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F4FAEA11E160F2400A6143A /* Project object */;
+}
