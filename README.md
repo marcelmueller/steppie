@@ -16,3 +16,7 @@ I have three main goals for this project:
 ## Feedback
 
 Feel free come up with suggestions and code reviews. Feedback is much appreciated. You can find me on Twitter: @grigio.
+
+## Special thanks
+
+[Marcelo Fabri](https://github.com/marcelofabri/) and its enormous patience to teach and help me when I was totally stuck. 
