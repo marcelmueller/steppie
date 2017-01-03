@@ -19,4 +19,4 @@ Feel free to come up with suggestions and code reviews. Feedback is much appreci
 
 ## Special thanks
 
-[Marcelo Fabri](https://github.com/marcelofabri/) and its enormous patience to teach and help me when I was totally stuck. 
+[Marcelo Fabri](https://github.com/marcelofabri/) and his enormous patience to teach and help me when I was totally stuck. 
