@@ -15,4 +15,4 @@ I have three main goals for this project:
 
 ## Feedback
 
-Feel free come up with suggestions and code reviews. Feedback is much appreciated. You can find me on Twitter @grigio.
+Feel free come up with suggestions and code reviews. Feedback is much appreciated. You can find me on Twitter: @grigio.
