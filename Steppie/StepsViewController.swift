@@ -101,23 +101,68 @@ private extension StepsViewController {
     }
     
     func querySteps() {
-        let sampleQuery = HKSampleQuery(sampleType: healthKitManager.stepsCount!,
-                                        predicate: nil,
-                                        limit: 10,
-                                        sortDescriptors: nil)
-        { [unowned self] (query, results, error) in
-            
-            DispatchQueue.main.async {
-                
-                if let results = results as? [HKQuantitySample] {
-                    self.steps = results
-                    self.tableView.reloadData()
-                }
-                //            self.activityIndicator.stopAnimating()
-            }
+        
+        let calendar = Calendar.current
+        
+        let interval = NSDateComponents()
+        interval.day = 7
+        
+        // Set the anchor date to Monday at 3:00 a.m.
+        let anchorComponents = calendar.dateComponents([.day, .month, .year, .weekday], from: self)
+        
+        
+        let offset = (7 + anchorComponents.weekday - 2) % 7
+        anchorComponents.day -= offset
+        anchorComponents.hour = 3
+        
+        guard let anchorDate = calendar.dateFromComponents(anchorComponents) else {
+            fatalError("*** unable to create a valid date from the given components ***")
         }
         
-        healthKitManager.healthStore?.execute(sampleQuery)
-    }
-    
-}
+        guard let quantityType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount) else {
+            fatalError("*** Unable to create a step count type ***")
+        }
+        
+        
+        // Create the query
+        let query = HKStatisticsCollectionQuery(quantityType: quantityType,
+                                                quantitySamplePredicate: nil,
+                                                options: .CumulativeSum,
+                                                anchorDate: anchorDate,
+                                                intervalComponents: interval)
+        
+        // Set the results handler
+        query.initialResultsHandler = {
+            query, results, error in
+            
+            // Set the results handler
+            query.initialResultsHandler = {
+                query, results, error in
+                
+                guard let statsCollection = results else {
+                    // Perform proper error handling here
+                    fatalError("*** An error occurred while calculating the statistics: \(error?.localizedDescription) ***")
+                }
+                
+                let endDate = NSDate()
+                
+                guard let startDate = calendar.dateByAddingUnit(.Month, value: -3, toDate: endDate, options: []) else {
+                    fatalError("*** Unable to calculate the start date ***")
+                }
+                
+                // Plot the weekly step counts over the past 3 months
+                statsCollection.enumerateStatisticsFromDate(startDate, toDate: endDate) { [unowned self] statistics, stop in
+                    
+                    if let quantity = statistics.sumQuantity() {
+                        let date = statistics.startDate
+                        let value = quantity.doubleValueForUnit(HKUnit.countUnit())
+                        
+                        // Call a custom method to plot each data point.
+                        self.plotWeeklyStepCount(value, forDate: date)
+                    }
+                }
+            }
+            
+            healthStore.executeQuery(query)
+        }
+    }}
