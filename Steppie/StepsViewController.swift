@@ -100,6 +100,8 @@ private extension StepsViewController {
         healthKitManager.healthStore?.execute(statisticsSumQuery)
     }
     
+    // DAQUI PRA BAIXO É CÓDIGO DA APPPLE - https://developer.apple.com/reference/healthkit/hkstatisticscollectionquery
+    
     func querySteps() {
         
         let calendar = Calendar.current
@@ -107,7 +109,9 @@ private extension StepsViewController {
         let interval = NSDateComponents()
         interval.day = 7
         
-        // Set the anchor date to Monday at 3:00 a.m.
+        // Set the anchor date to Monday at 3:00 a.m. Eu precisei atualizar isso porque não estava em Swift 3. Mas aí fica dando esse erro.
+        
+        
         let anchorComponents = calendar.dateComponents([.day, .month, .year, .weekday], from: self)
         
         
