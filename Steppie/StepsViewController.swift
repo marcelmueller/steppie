@@ -101,10 +101,13 @@ private extension StepsViewController {
     }
     
     func querySteps() {
+        
+        let sortDescriptor = NSSortDescriptor(key:HKSampleSortIdentifierStartDate, ascending: false)
+        
         let sampleQuery = HKSampleQuery(sampleType: healthKitManager.stepsCount!,
                                         predicate: nil,
-                                        limit: 10,
-                                        sortDescriptors: nil)
+                                        limit: 100,
+                                        sortDescriptors: [sortDescriptor])
         { [unowned self] (query, results, error) in
             
             DispatchQueue.main.async {
