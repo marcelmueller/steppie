@@ -109,17 +109,15 @@ private extension StepsViewController {
         let interval = NSDateComponents()
         interval.day = 7
         
-        // Set the anchor date to Monday at 3:00 a.m. Eu precisei atualizar isso porque não estava em Swift 3. Mas aí fica dando esse erro.
-        
-        
-        let anchorComponents = calendar.dateComponents([.day, .month, .year, .weekday], from: self)
-        
-        
-        let offset = (7 + anchorComponents.weekday - 2) % 7
-        anchorComponents.day -= offset
+        // Set the anchor at 3:00 a.m. Eu precisei atualizar isso porque não estava em Swift 3. Mas aí fica dando esse erro.
+        var anchorComponents = calendar.dateComponents([.day, .month, .year, .weekday], from: Date())
         anchorComponents.hour = 3
         
-        guard let anchorDate = calendar.dateFromComponents(anchorComponents) else {
+        var day = (anchorComponents.weekday! - 2 + 7) % 7
+        anchorComponents.day = day
+        
+        
+        guard let anchorDate = calendar.date(from: anchorComponents) else {
             fatalError("*** unable to create a valid date from the given components ***")
         }
         
@@ -131,9 +129,9 @@ private extension StepsViewController {
         // Create the query
         let query = HKStatisticsCollectionQuery(quantityType: quantityType,
                                                 quantitySamplePredicate: nil,
-                                                options: .CumulativeSum,
+                                                options: .cumulativeSum,
                                                 anchorDate: anchorDate,
-                                                intervalComponents: interval)
+                                                intervalComponents: interval as DateComponents)
         
         // Set the results handler
         query.initialResultsHandler = {
@@ -149,17 +147,18 @@ private extension StepsViewController {
                 }
                 
                 let endDate = NSDate()
+            
                 
-                guard let startDate = calendar.dateByAddingUnit(.Month, value: -3, toDate: endDate, options: []) else {
+                guard let startDate = calendar.date(byAdding: .month, value: -3, to: endDate as Date) else {
                     fatalError("*** Unable to calculate the start date ***")
                 }
                 
                 // Plot the weekly step counts over the past 3 months
-                statsCollection.enumerateStatisticsFromDate(startDate, toDate: endDate) { [unowned self] statistics, stop in
+                statsCollection.enumerateStatistics(from: startDate, to: endDate as Date) { [unowned self] statistics, stop in
                     
                     if let quantity = statistics.sumQuantity() {
                         let date = statistics.startDate
-                        let value = quantity.doubleValueForUnit(HKUnit.countUnit())
+                        let value = quantity.doubleValue(for: HKUnit.count())
                         
                         // Call a custom method to plot each data point.
                         self.plotWeeklyStepCount(value, forDate: date)
